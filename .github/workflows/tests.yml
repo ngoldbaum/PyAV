@@ -69,6 +69,7 @@ jobs:
           CIBW_TEST_REQUIRES: pytest numpy
           # skip tests when there are no binary wheels of numpy
           CIBW_TEST_SKIP: "*_i686"
+          CIBW_ENABLE: cpython-freethreading
         run: |
           pip install cibuildwheel delvewheel
           cibuildwheel --output-dir dist
